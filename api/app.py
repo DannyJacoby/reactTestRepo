@@ -11,14 +11,14 @@ cors = CORS(app)
 @app.route('/api')
 @cross_origin()
 def welcome():
-    return "Welcome to the API!!"
+    return "<h1>Welcome to the API!!</h1>"
 
-@app.route('/time')
+@app.route('/')
 @cross_origin()
 def get_current_time():
     return {'time': time.time()}
 
-@app.route('/')
+@app.route('/index')
 @cross_origin()
 def serve():
     return send_from_directory(app.static_folder,'index.html')
