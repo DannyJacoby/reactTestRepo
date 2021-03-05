@@ -10,7 +10,7 @@ function App() {
   const [getMessage, setGetMessage] = useState({})
 
   useEffect(()=>{
-    axios.get(herokuURL).then(response => {
+    axios.get(localURL).then(response => {
       console.log("SUCCESS", response)
       setGetMessage(response)
     }).catch(error => {
