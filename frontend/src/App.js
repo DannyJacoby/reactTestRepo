@@ -3,11 +3,14 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios' 
 
+var herokuURL = "http://danny438test.herokuapp.com/flask/hello";
+var localURL  = "http://localhost:5000/flask/hello";
+
 function App() {
   const [getMessage, setGetMessage] = useState({})
 
   useEffect(()=>{
-    axios.get('http://danny438test.herokuapp.com/flask/hello').then(response => {
+    axios.get(herokuURL).then(response => {
       console.log("SUCCESS", response)
       setGetMessage(response)
     }).catch(error => {
