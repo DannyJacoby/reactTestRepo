@@ -1,6 +1,6 @@
 from flask import Flask, request, redirect, url_for, session, send_from_directory
 from flask_cors import CORS, cross_origin
-from flask_session import Session
+#from flask_session import Session
 
 # Non Flask/DB imports
 from datetime import date
@@ -9,7 +9,7 @@ import time
 
 flaskApp = Flask(__name__, static_folder="frontend/", static_url_path="")
 CORS(flaskApp)
-Session(flaskApp)
+#Session(flaskApp)
 
 
 @flaskApp.route("/time")
