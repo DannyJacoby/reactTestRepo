@@ -1,14 +1,33 @@
-from flask import Flask, send_from_directory
-from flask_restful import Api, Resource, reqparse
-from flask_cors import CORS #comment this on deployment
-from api.HelloApiHandler import HelloApiHandler
+from flask import Flask, request, redirect, url_for, session, send_from_directory
+from flask_cors import CORS, cross_origin
+from flask_session import Session
 
-app = Flask(__name__, static_url_path='', static_folder='frontend/build')
-CORS(app) #comment this on deployment
-api = Api(app)
+# Non Flask/DB imports
+from datetime import date
+import os
+import time
 
-@app.route("/", defaults={'path':''})
-def serve(path):
-    return send_from_directory(app.static_folder,'index.html')
+flaskApp = Flask(__name__, static_folder="frontend/", static_url_path="")
+CORS(flaskApp)
+Session(flaskApp)
 
-api.add_resource(HelloApiHandler, '/flask/hello')
+
+@flaskApp.route("/time")
+@cross_origin()
+def get_current_time():
+    return {"time" : time.time()}
+
+@flaskApp.route("/date")
+@cross_origin()
+def get_current_date():
+    return {"date" : date.today()}
+
+@flaskApp.route("/")
+@flaskApp.route("/index")
+@cross_origin()
+def index():
+    return send_from_directory(flaskApp.static_folder, "index.html")
+
+@flaskApp.errorhandler(404)
+def not_found(e):
+    return flaskApp.send_static_file('error.html')

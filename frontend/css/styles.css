@@ -1,0 +1,195 @@
+body{
+  background-image: url("image/airplane5.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h1{
+  font-size: 40px;
+  text-align: center;
+  font-style: oblique;
+}
+
+h2{
+  text-align: center;
+  font-style: oblique;
+}
+
+h3{
+  text-align: center;
+  padding: 30px;
+}
+
+p{
+  font-size: 17px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: row;
+  justify-content: space-around;
+  padding: 10px;
+  align-items: space-between space-around space-evenly stretch;
+}
+
+.container0{
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin: 35px;
+  border: 7px solid #A4D1E1;
+  border-radius: 25px;
+}
+
+.container1{
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+  margin: 35px;
+  border: 7px solid #4C4646;
+  border-radius: 25px;
+}
+
+.containerIntro{
+  display: flex;
+  flex-direction: column;
+  word-wrap: normal;
+  padding: 25px;
+  margin: 35px;
+  border: 7px solid #A4D1E1;
+  border-radius: 25px;
+  /* opacity: 0.8; */
+  /* background-color: ; */
+}
+
+#index3{
+  background-color: #A4D1E1;
+}
+
+.containerLogin{
+  display: flex;
+  flex-direction: row;
+  align-items: space-between space-around space-evenly stretch;
+  flex-wrap: wrap;
+  text-align: center;
+  border: 7px solid black;
+}
+
+.insideLogin{
+  background-color: white;
+  margin: 50px;
+  height: 300px;
+  width: 450px;
+  border-radius: 20px
+}
+
+.registerContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.userflightsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.planFlightContainer{
+  display: flex;
+  border: 5px solid black;
+  border-radius: 5px;
+  justify-content: space-around;
+  background-color: white;
+  padding: 50px;
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.planFlightContainer > form{
+  text-align: left;
+}
+
+#invisible{
+  visibility: hidden;
+}
+
+#index3 > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 25px;
+    text-align: center;
+    margin: 30px;
+}
+
+#structure{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: '';
+  border: 12px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.leftHolder > div{
+ background-color: white;
+ border: 5px solid blue;
+ margin: 5px;
+
+}
+
+.rightHolder{
+  width: 300px;
+}
+
+.jumbotron{
+  background-position: center;
+  border-radius: 25px;
+  border: 2px solid #A9A9A9;
+  padding: 20px;
+  width:700px;
+  height: 400px;
+
+}
+
+.footer{
+  padding: 100px;
+  padding-bottom:2px;
+  font-size: 1em;
+  text-decoration: center;
+  color: white;
+}
+
+.header, .footer {
+  text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: gray;
+    border-color: #007bff;
+}
+
+.weatherContainer{
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+#insideWeather{
+  background-color: #00BFFF;
+  border-radius: 5px;
+  margin-top: 15px;
+}
