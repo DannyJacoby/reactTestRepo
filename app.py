@@ -11,7 +11,6 @@ flaskApp = Flask(__name__, static_folder="frontend/", static_url_path="")
 CORS(flaskApp)
 Session(flaskApp)
 
-
 @flaskApp.route("/time")
 @cross_origin()
 def get_current_time():
